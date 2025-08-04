@@ -5,6 +5,7 @@ class Shot(CircleShape, pygame.sprite.Sprite):
     def __init__(self, x, y, radius):
             super().__init__(x,y, radius)
             pygame.sprite.Sprite.__init__(self)
+            self.add(self.containers)
             
 
     def draw(self,screen):
