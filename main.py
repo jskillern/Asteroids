@@ -49,10 +49,8 @@ def main():
         for asteroid in list(asteroids):
             for shot in list(shots):
                 if shot.collision(asteroid):
-                    print("Collision detected")
                     shot.kill()
-                    asteroid.kill()
-                    print(f"Shots reminaing: {len(shots)}")
+                    asteroid.split(asteroids, updatable, drawable)
         for sprite in drawable:
             sprite.draw(screen)
         pygame.display.flip()
